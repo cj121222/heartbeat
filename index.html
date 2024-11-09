@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div id="heart"></div>
+
+  </div>
+  <div id="message">Click me please</div>
+
+  <audio id="heartbeat-sound" src="files/heartbeat.mp3" preload="auto"></audio>
+
+  <script>
+    const heart = document.getElementById("heart");
+    const message = document.getElementById("message");
+    const heartbeatSound = document.getElementById("heartbeat-sound");
+
+
+    function playHeartbeatSound() {
+      heartbeatSound.currentTime = 0; 
+      heartbeatSound.play(); 
+    }
+    
+    heart.onclick = () => {
+      message.textContent = "HI BABY! I made this for you^^";
+      playHeartbeatSound(); 
+
+     
+      setTimeout(() => {
+        message.textContent = "Palangga kaayo na, hmm?";
+        playHeartbeatSound(); 
+      }, 2000); 
+
+      setTimeout(() => {
+        message.textContent = "Don't be sad na okay?";
+        playHeartbeatSound(); 
+      }, 4000); 
+
+      setTimeout(() => {
+        message.textContent = "I Love you Maby🥺❤️";
+        heart.style.animation = "beat 1.05s infinite";  
+        playHeartbeatSound(); 
+      }, 6000); 
+
+      setTimeout(() => {
+        message.textContent = "babye, mwamwa!";
+        heart.style.animation = "beat 0.15s infinite";  
+        playHeartbeatSound(); 
+      }, 8000); 
+
+      setTimeout(() => {
+        message.textContent = "....................";
+        heart.style.animation = "none";  
+      }, 10000); 
+ };
+
+    
+  </script>
+  
+</body>
+</html>
