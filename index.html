@@ -9,8 +9,6 @@
 <body>
   
   <div id="heart"></div>
-
-  </div>
   <div id="message">Click me please</div>
 
   <audio id="heartbeat-sound" src="files/heartbeat.mp3" preload="auto"></audio>
@@ -20,17 +18,15 @@
     const message = document.getElementById("message");
     const heartbeatSound = document.getElementById("heartbeat-sound");
 
-
     function playHeartbeatSound() {
       heartbeatSound.currentTime = 0; 
-      heartbeaSound.play();
+      heartbeatSound.play();  // Fixed typo here
     }
     
     heart.onclick = () => {
       message.textContent = "HI BABY! I made this for you^^";
       playHeartbeatSound(); 
 
-     
       setTimeout(() => {
         message.textContent = "Palangga kaayo na, hmm?";
         playHeartbeatSound(); 
@@ -57,9 +53,7 @@
         message.textContent = "....................";
         heart.style.animation = "none";  
       }, 10000); 
- };
-
-    
+    };
   </script>
   
 </body>
